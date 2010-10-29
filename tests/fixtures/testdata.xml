@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataset>
+	<table name="testtable">
+		<column>tableid</column>
+		<column>name</column>
+		<column>createddate</column>
+		<column>ranking</column>
+		<row>
+			<value>1</value>
+			<value>First Name</value>
+			<value>2010-10-29 13:56:52</value>
+			<value>1</value>
+		</row>
+		<row>
+			<value>2</value>
+			<value>Another Name</value>
+			<value>1992-02-12 04:14:42</value>
+			<null />
+		</row>
+		<row>
+			<value>3</value>
+			<value>One More Name</value>
+			<value>2003-08-21 18:42:31</value>
+			<value>91</value>
+		</row>
+	</table>
+</dataset>
