@@ -206,7 +206,7 @@ abstract class Jaded_Model
 	{
 		$sInternalField = $this->getModelDefinition()->getInternalField($sFieldName);
 		if (!$sInternalField) {
-			$this->throwInvalidMethodException($sPrefix.$sMethodName);
+			$this->throwInvalidMethodException($sPrefix.$sFieldName);
 		}
 		return $sInternalField;
 	}

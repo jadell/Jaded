@@ -92,7 +92,7 @@ class Jaded_Db_Pdo extends Jaded_Db
 			$aDsn = parse_url($this->sDsn);
 			$sScheme = $aDsn['scheme'];
 			$sHost = $aDsn['host'];
-			$sPort = $aDsn['port'] ? $aDsn['port'] : 3306;
+			$sPort = isset($aDsn['port']) ? $aDsn['port'] : 3306;
 			$sDbName = trim($aDsn['path'], '/');
 			$sUser = $aDsn['user'] ? $aDsn['user'] : '';
 			$sPass = $aDsn['pass'] ? $aDsn['pass'] : '';

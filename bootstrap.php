@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL | E_STRICT);
+
 define('JADED_ROOTPATH', dirname(__FILE__));
 define('JADED_LIBPATH', JADED_ROOTPATH.'/lib');
 
