@@ -66,11 +66,4 @@ class Jaded_ControllerTest extends PHPUnit_Framework_TestCase
 		$this->oController->dispatch($this->oRequest, $this->oResponse);
 	}
 }
-
-abstract class ControllerTester extends Jaded_Controller
-{
-	public $bDoPreProcess = true;
-	public $bDoProcess = true;
-	public $bDoPostProcess = true;
-}
 ?>

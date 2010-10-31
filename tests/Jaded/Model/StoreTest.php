@@ -20,12 +20,4 @@ class Jaded_Model_StoreTest extends PHPUnit_Framework_TestCase
 		$oDef = Jaded_Model_Store::instance(__CLASS__);
 	}
 }
-
-class ModelStoreTester extends Jaded_Model_Store
-{
-	public function create(Jaded_Model $oModel){}
-	public function delete(Jaded_Model $oModel){}
-	public function load(Jaded_Model $oModel){}
-	public function update(Jaded_Model $oModel){}
-}
 ?>

@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 cd `dirname $0`
-phpunit --bootstrap ./bootstrap.php $*
+phpunit --bootstrap tests/bootstrap.test.php $*

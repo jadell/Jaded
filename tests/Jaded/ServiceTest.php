@@ -20,8 +20,4 @@ class Jaded_ServiceTest extends PHPUnit_Framework_TestCase
 		$oDef = Jaded_Service::instance(__CLASS__);
 	}
 }
-
-class ServiceTester extends Jaded_Service
-{
-}
 ?>

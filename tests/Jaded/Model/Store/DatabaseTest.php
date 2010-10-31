@@ -116,30 +116,4 @@ class Jaded_Model_Store_DatabaseTest extends PHPUnit_Framework_TestCase
 		$this->assertEquals($aExpected, $aActual);
 	}
 }
-
-class StoreDatabaseTesterDefinition extends Jaded_Model_Definition
-{
-	public $aFieldMap = array(
-		'tableid'      => 'tableid',
-		'name'         => 'name',
-		'createddate'  => 'createddate',
-		'ranking'      => 'ranking',
-	);
-
-	public $aKeyFields = array(
-		'tableid' => 'auto',
-	);
-}
-
-class StoreDatabaseTesterStore extends Jaded_Model_Store_Database
-{
-	protected $sTable = 'testtable';
-	protected $sDbId = 'testdb';
-}
-
-class StoreDatabaseTester extends Jaded_Model
-{
-	protected $sDefaultDefinition = 'StoreDatabaseTesterDefinition';
-	protected $sDefaultStore      = 'StoreDatabaseTesterStore';
-}
 ?>

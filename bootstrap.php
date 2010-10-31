@@ -14,7 +14,4 @@ $oJadedAutoloader->init();
 
 Jaded_Config::set('jaded.rootpath', $sJadedRootPath);
 Jaded_Config::set('jaded.libpath',  $sJadedLibPath);
-Jaded_Config::set('jaded.pearpath', '/usr/share/php');
-
-$oJadedAutoloader->register(new Jaded_Autoloader_Finder_Pear(Jaded_Config::get('jaded.pearpath')));
 ?>
