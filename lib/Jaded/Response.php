@@ -4,5 +4,67 @@
  */
 class Jaded_Response
 {
+	protected $aAssigns = array();
+	protected $aHeaders = array();
+
+	////////////////////////////////////////////////////////////////////////////////
+	// PUBLIC /////////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////////////////
+
+	/**
+	 * Assign a named value
+	 * @param string $sName
+	 * @param mixed $mValue
+	 */
+	public function assign($sName, $mValue)
+	{
+		$this->aAssigns[$sName] = $mValue;
+	}
+
+	/**
+	 * Retrieve all assigned elements in this response
+	 * @return array
+	 */
+	public function getAssigns()
+	{
+		return $this->aAssigns;
+	}
+
+	/**
+	 * Assign a header
+	 * @param string $sName
+	 * @param string $sValue
+	 */
+	public function header($sName, $sValue)
+	{
+		$this->aHeaders[$sName] = $sValue;
+	}
+
+	/**
+	 * Retrieve all assigned headers in this response
+	 * @return array
+	 */
+	public function getHeaders()
+	{
+		return $this->aHeaders;
+	}
+
+	/**
+	 * Redirect to another application uri
+	 * @param string $sUri
+	 */
+	public function redirect($sUri)
+	{
+		$this->header('Location', $sUri);
+	}
+
+	/**
+	 * Is this response carrying a redirect?
+	 * @return boolean
+	 */
+	public function isRedirected()
+	{
+		return !empty($this->aHeaders['Location']);
+	}
 }
 ?>
