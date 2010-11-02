@@ -45,17 +45,19 @@ class Jaded_Router_Route_Dynamic implements Jaded_Router_Route
 		foreach ($aRouteParts as $i => $sRoutePart) {
 			$sUriPart = isset($aUriParts[$i]) ? $aUriParts[$i] : null;
 
-			if (strpos($sRoutePart, ':') === 0) {
-				$sName = substr($sRoutePart, 1);
-				if ($sUriPart !== null) {
-					$aMatches[$sName] = $sUriPart;
-				} else if (!isset($aMatches[$sName])) {
+			if ($sRoutePart != '*') {
+				if (strpos($sRoutePart, ':') === 0) {
+					$sName = substr($sRoutePart, 1);
+					if ($sUriPart !== null) {
+						$aMatches[$sName] = $sUriPart;
+					} else if (!isset($aMatches[$sName])) {
+						$aMatches = null;
+						break;
+					}
+				} else if ($sUriPart != $sRoutePart) {
 					$aMatches = null;
 					break;
 				}
-			} else if ($sUriPart != $sRoutePart) {
-				$aMatches = null;
-				break;
 			}
 		}
 		return $aMatches;

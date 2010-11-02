@@ -106,6 +106,18 @@ class Jaded_Router_Route_DynamicTest extends PHPUnit_Framework_TestCase
 			// Controller override
 			array('/:controller/:matchid', array('controller'=>'MatchMeController', 'matchid'=>456),
 				'/match/123', array('controller'=>'match', 'matchid'=>'123')),
+
+			// Wildcard match
+			array('/*', array('controller'=>'MatchMeController', 'matchid'=>456),
+				'/match/123', array('controller'=>'MatchMeController', 'matchid'=>'456')),
+			array('/*/:matchid', array('controller'=>'MatchMeController', 'matchid'=>456),
+				'/match/123', array('controller'=>'MatchMeController', 'matchid'=>'123')),
+			array('/*/static/*/:matchid', array('controller'=>'MatchMeController', 'matchid'=>456),
+				'/match/123', null),
+			array('/*/static/*/:matchid', array('controller'=>'MatchMeController', 'matchid'=>456),
+				'/match/static/path/123', array('controller'=>'MatchMeController', 'matchid'=>'123')),
+			array('/*/static/*/:matchid', array('controller'=>'MatchMeController'),
+				'/match/static/path', null),
 		);
 	}
 }
