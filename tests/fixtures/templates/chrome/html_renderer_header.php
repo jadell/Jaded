@@ -1,0 +1,1 @@
+Header <?php print $sType; ?> template.

@@ -1,0 +1,1 @@
+Footer <?php print $sType; ?> template.
