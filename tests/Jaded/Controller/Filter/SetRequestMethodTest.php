@@ -17,4 +17,3 @@ class Jaded_Controller_Filter_SetRequestMethodTest extends PHPUnit_Framework_Tes
 		$this->assertEquals($sMethod, $oRequest->getMethod());
 	}
 }
-?>

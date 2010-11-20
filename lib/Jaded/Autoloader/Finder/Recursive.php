@@ -37,4 +37,3 @@ class Jaded_Autoloader_Finder_Recursive implements Jaded_Autoloader_Finder
 		return null;
 	}
 }
-?>

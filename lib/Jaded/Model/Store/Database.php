@@ -156,4 +156,3 @@ abstract class Jaded_Model_Store_Database extends Jaded_Model_Store
 		return array($sWhere, $aParams);
 	}
 }
-?>

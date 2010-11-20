@@ -37,4 +37,3 @@ class Jaded_Renderer_Html_Append extends Jaded_Renderer_Html
 		$this->renderTemplate($this->sAppendTemplate, $aData);
 	}
 }
-?>

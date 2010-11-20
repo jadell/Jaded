@@ -37,4 +37,3 @@ class Jaded_Renderer_Html_Prepend extends Jaded_Renderer_Html
 		$this->oRenderer->render($sTemplate, $aData, $aHeaders);
 	}
 }
-?>

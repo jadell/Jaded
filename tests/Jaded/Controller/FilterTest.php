@@ -30,4 +30,3 @@ class Jaded_Controller_FilterTest extends PHPUnit_Framework_TestCase
 		$oOuterFilter->dispatch($oRequest, $oResponse);
 	}
 }
-?>

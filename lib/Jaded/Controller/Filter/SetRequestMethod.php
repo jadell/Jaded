@@ -11,4 +11,3 @@ class Jaded_Controller_Filter_SetRequestMethod extends Jaded_Controller_Filter
 
 	protected function postProcess(Jaded_Request $oRequest, Jaded_Response $oResponse){}
 }
-?>

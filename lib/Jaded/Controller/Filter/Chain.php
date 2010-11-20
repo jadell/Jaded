@@ -32,4 +32,3 @@ abstract class Jaded_Controller_Filter_Chain extends Jaded_Controller_Filter
 	protected function preProcess(Jaded_Request $oRequest, Jaded_Response $oResponse){}
 	protected function postProcess(Jaded_Request $oRequest, Jaded_Response $oResponse){}
 }
-?>

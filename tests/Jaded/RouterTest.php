@@ -80,4 +80,3 @@ class Jaded_RouterTest extends PHPUnit_Framework_TestCase
 		$this->assertEquals($sParam2, $oRequest->getParam('param2'));
 	}
 }
-?>

@@ -116,4 +116,3 @@ class Jaded_Model_Store_DatabaseTest extends PHPUnit_Framework_TestCase
 		$this->assertEquals($aExpected, $aActual);
 	}
 }
-?>

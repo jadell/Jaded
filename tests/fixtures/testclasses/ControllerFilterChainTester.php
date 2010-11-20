@@ -26,4 +26,3 @@ class FilterChainTester2 extends Jaded_Controller_Filter
 		$oRequest->setParam('Param2', 'set by filter 2');
 	}
 }
-?>

@@ -118,4 +118,3 @@ class Jaded_Db_Pdo extends Jaded_Db
 		return $oStmt;
 	}
 }
-?>

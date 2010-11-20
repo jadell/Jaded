@@ -90,4 +90,3 @@ class Jaded_Model_DefinitionTest extends PHPUnit_Framework_TestCase
 		$this->assertEquals($oDef->aKeyFields, $oDef->getKeys());
 	}
 }
-?>

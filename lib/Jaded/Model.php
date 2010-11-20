@@ -222,4 +222,3 @@ abstract class Jaded_Model
 		throw new Jaded_Model_Exception("Method [{$sMethodName}] does not exist in Model [{$sClass}]", Jaded_Model_Exception::InvalidMethod);
 	}
 }
-?>

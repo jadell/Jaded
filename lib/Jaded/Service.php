@@ -30,4 +30,3 @@ abstract class Jaded_Service
 		return self::$aInstances[$sType];
 	}
 }
-?>

@@ -14,4 +14,3 @@ $oJadedAutoloader->init();
 
 Jaded_Config::set('jaded.rootpath', $sJadedRootPath);
 Jaded_Config::set('jaded.libpath',  $sJadedLibPath);
-?>

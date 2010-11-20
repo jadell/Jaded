@@ -5,4 +5,3 @@
 class Jaded_Exception extends Exception
 {
 }
-?>

@@ -5,4 +5,3 @@ abstract class ControllerTester extends Jaded_Controller
 	public $bDoProcess = true;
 	public $bDoPostProcess = true;
 }
-?>

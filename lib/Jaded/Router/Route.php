@@ -15,4 +15,3 @@ interface Jaded_Router_Route
 	 */
 	public function map($sUri);
 }
-?>

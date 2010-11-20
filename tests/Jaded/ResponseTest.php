@@ -49,4 +49,3 @@ class Jaded_ResponseTest extends PHPUnit_Framework_TestCase
 		$this->assertTrue($oResponse->isRedirected());
 	}
 }
-?>

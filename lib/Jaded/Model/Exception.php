@@ -10,4 +10,3 @@ class Jaded_Model_Exception extends Jaded_Exception
 	const ModelIdentified = 3;
 	const ModelNotIdentified = 4;
 }
-?>

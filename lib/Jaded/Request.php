@@ -105,4 +105,3 @@ class Jaded_Request
 		);
 	}
 }
-?>

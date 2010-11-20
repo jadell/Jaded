@@ -20,4 +20,3 @@ class Jaded_Model_StoreTest extends PHPUnit_Framework_TestCase
 		$oDef = Jaded_Model_Store::instance(__CLASS__);
 	}
 }
-?>

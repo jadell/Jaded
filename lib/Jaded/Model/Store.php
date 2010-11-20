@@ -63,4 +63,3 @@ abstract class Jaded_Model_Store
 	 */
 	abstract public function update(Jaded_Model $oModel);
 }
-?>

@@ -133,4 +133,3 @@ class Jaded_Config
 		$this->aConfig[$sKey] = $mValue;
 	}
 }
-?>

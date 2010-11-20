@@ -66,4 +66,3 @@ class Jaded_RequestTest extends PHPUnit_Framework_TestCase
 		);
 	}
 }
-?>

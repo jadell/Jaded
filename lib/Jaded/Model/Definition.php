@@ -128,4 +128,3 @@ abstract class Jaded_Model_Definition
 		return true;
 	}
 }
-?>

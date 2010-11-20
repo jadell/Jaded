@@ -32,4 +32,3 @@ class Jaded_Autoloader_Finder_RecursiveTest extends PHPUnit_Framework_TestCase
 		$this->assertEquals(vfsStream::url('lib/path/dir2/2B/ConcreteClass.php'), $sFilePath);
 	}
 }
-?>

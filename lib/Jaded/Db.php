@@ -75,4 +75,3 @@ abstract class Jaded_Db
 	 */
 	abstract public function getRow($sSql, $aParams=array());
 }
-?>

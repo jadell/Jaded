@@ -69,4 +69,3 @@ class Jaded_Renderer_Html implements Jaded_Renderer
 		require($sTemplateFile);
 	}
 }
-?>

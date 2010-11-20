@@ -31,4 +31,3 @@ class Jaded_Autoloader_Finder_Pear implements Jaded_Autoloader_Finder
 		return file_exists($sFilePath) ? $sFilePath : null;
 	}
 }
-?>

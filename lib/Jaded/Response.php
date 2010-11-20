@@ -67,4 +67,3 @@ class Jaded_Response
 		return !empty($this->aHeaders['Location']);
 	}
 }
-?>

@@ -29,4 +29,3 @@ abstract class Jaded_Controller_Filter extends Jaded_Controller
 		$this->oController->dispatch($oRequest, $oResponse);
 	}
 }
-?>

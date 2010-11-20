@@ -128,4 +128,3 @@ class Jaded_Db_PdoTest extends PHPUnit_Extensions_Database_TestCase
 		return $this->createXMLDataSet('tests/fixtures/testdata.xml');
 	}
 }
-?>

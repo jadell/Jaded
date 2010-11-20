@@ -12,4 +12,3 @@ class StoreDatabaseTesterDefinition extends Jaded_Model_Definition
 		'tableid' => 'auto',
 	);
 }
-?>

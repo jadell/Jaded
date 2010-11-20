@@ -14,4 +14,3 @@ class Jaded_Controller_Filter_ChainTest extends PHPUnit_Framework_TestCase
 		$this->assertEquals('set by filter 2', $oRequest->getParam('Param2'));
 	}
 }
-?>

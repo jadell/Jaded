@@ -66,4 +66,3 @@ class Jaded_ControllerTest extends PHPUnit_Framework_TestCase
 		$this->oController->dispatch($this->oRequest, $this->oResponse);
 	}
 }
-?>

@@ -17,4 +17,3 @@ class ModelDefinitionTester extends Jaded_Model_Definition
 		'defaultfield' => 'some default',
 	);
 }
-?>

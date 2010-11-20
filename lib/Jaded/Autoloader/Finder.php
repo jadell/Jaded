@@ -11,4 +11,3 @@ interface Jaded_Autoloader_Finder
 	 */
 	public function find($sClassname);
 }
-?>

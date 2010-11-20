@@ -17,4 +17,3 @@ interface Jaded_Renderer
 	 */
 	public function render($sTemplate, $aData, $aHeaders);
 }
-?>

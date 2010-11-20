@@ -77,4 +77,3 @@ class Jaded_ConfigTest extends PHPUnit_Framework_TestCase
 		$this->assertEquals($sValue, Jaded_Config::get($sKey));
 	}
 }
-?>

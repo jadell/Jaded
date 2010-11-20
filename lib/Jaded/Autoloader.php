@@ -44,4 +44,3 @@ class Jaded_Autoloader
 		array_unshift($this->aFinders, $oFinder);
 	}
 }
-?>

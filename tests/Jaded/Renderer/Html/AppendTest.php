@@ -36,4 +36,3 @@ class Jaded_Renderer_Html_AppendTest extends PHPUnit_Framework_TestCase
 		print 'this has been rendered. ';
 	}
 }
-?>

@@ -63,4 +63,3 @@ class Jaded_Router_Route_Dynamic implements Jaded_Router_Route
 		return $aMatches;
 	}
 }
-?>

@@ -62,4 +62,3 @@ class Jaded_Router
 		array_unshift($this->aRoutes, $oRoute);
 	}
 }
-?>
