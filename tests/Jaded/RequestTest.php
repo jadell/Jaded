@@ -65,4 +65,18 @@ class Jaded_RequestTest extends PHPUnit_Framework_TestCase
 			array('gEt', Jaded_Request::MethodGet, true, false, false, false),
 		);
 	}
+
+	public function testSession_NoSessionSet_ReturnsCorrectSessionObject()
+	{
+		$oRequest = new Jaded_Request();
+		self::assertType('Jaded_Session_Php', $oRequest->getSession());
+	}
+
+	public function testSession_SessionSet_ReturnsSetSessionObject()
+	{
+		$oRequest = new Jaded_Request();
+		$oSession = $this->getMock('Jaded_Session');
+		$oRequest->setSession($oSession);
+		self::assertSame($oSession, $oRequest->getSession());
+	}
 }

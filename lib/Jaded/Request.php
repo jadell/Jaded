@@ -12,6 +12,7 @@ class Jaded_Request
 	protected $aParams = array();
 	protected $sControllerName = '';
 	protected $sMethod = self::MethodGet;
+	protected $oSession = null;
 
 	////////////////////////////////////////////////////////////////////////////////
 	// PUBLIC /////////////////////////////////////////////////////////////////////
@@ -85,6 +86,27 @@ class Jaded_Request
 	public function setParam($sName, $mValue)
 	{
 		$this->aParams[$sName] = $mValue;
+	}
+
+	/**
+	 * Return the session handler
+	 * @return object Jaded_Session
+	 */
+	public function getSession()
+	{
+		if ($this->oSession == null) {
+			$this->setSession(new Jaded_Session_Php());
+		}
+		return $this->oSession;
+	}
+
+	/**
+	 * Set a session object for this request
+	 * @param Jaded_Session $oSession
+	 */
+	public function setSession(Jaded_Session $oSession)
+	{
+		$this->oSession = $oSession;
 	}
 
 	////////////////////////////////////////////////////////////////////////////////
