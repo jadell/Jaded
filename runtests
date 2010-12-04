@@ -2,3 +2,4 @@
 
 cd `dirname $0`
 phpunit --bootstrap tests/bootstrap.test.php $*
+
