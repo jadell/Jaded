@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# Set up to run the tests
 cd `dirname $0`
 phpunit --bootstrap tests/bootstrap.test.php $*
 
