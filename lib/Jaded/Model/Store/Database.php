@@ -74,6 +74,7 @@ abstract class Jaded_Model_Store_Database extends Jaded_Model_Store
 	 * Load the given model from the data store
 	 * @param Jaded_Model $oModel
 	 * @throws Jaded_Model_Exception if the model given is not fully identified
+	 * @throws Jaded_Model_Exception if identified model not found in store
 	 */
 	public function load(Jaded_Model $oModel)
 	{
@@ -84,6 +85,9 @@ abstract class Jaded_Model_Store_Database extends Jaded_Model_Store
 		list($sWhere, $aParams) = $this->constructWhere($oModel);
 		$sSql = "SELECT * FROM {$this->sTable} WHERE {$sWhere}";
 		$aData = Jaded_Db::conn($this->sDbId)->getRow($sSql, $aParams);
+		if (!$aData) {
+			throw new Jaded_Model_Exception('Model could not be loaded; not found.', Jaded_Model_Exception::NotFoundInStore);
+		}
 
 		$aFlipMap = array_flip($oModel->getModelDefinition()->getFieldMap());
 		foreach ($aFlipMap as $sInternal => $sExternal) {

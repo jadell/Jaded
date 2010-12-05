@@ -9,4 +9,5 @@ class Jaded_Model_Exception extends Jaded_Exception
 	const InvalidMethod = 2;
 	const ModelIdentified = 3;
 	const ModelNotIdentified = 4;
+	const NotFoundInStore = 5;
 }

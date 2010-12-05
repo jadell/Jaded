@@ -47,6 +47,16 @@ class Jaded_Model_Store_DatabaseTest extends PHPUnit_Framework_TestCase
 		$this->assertEquals($this->aDefault['ranking'],     $oModel->getRanking());
 	}
 
+	public function testLoad_ModelIdentifiedNotInDb_ThrowsException()
+	{
+		$oModel = new StoreDatabaseTester(array(
+			'tableid' => $this->aDefault['tableid']+1000
+		));
+		$this->setExpectedException('Jaded_Model_Exception');
+
+		$this->oStore->load($oModel);
+	}
+
 	public function testCreate_ModelFullyIdentified_ThrowsException()
 	{
 		$oModel = new StoreDatabaseTester(array('tableid' => 3));

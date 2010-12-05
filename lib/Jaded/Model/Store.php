@@ -53,6 +53,7 @@ abstract class Jaded_Model_Store
 	 * Load the given model from the data store
 	 * @param Jaded_Model $oModel
 	 * @throws Jaded_Model_Exception if the model given is not fully identified
+	 * @throws Jaded_Model_Exception if identified model not found in store
 	 */
 	abstract public function load(Jaded_Model $oModel);
 
