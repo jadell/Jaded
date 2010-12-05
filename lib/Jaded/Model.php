@@ -160,7 +160,7 @@ abstract class Jaded_Model
 
 		if ($sGetSetCheck == 'set' || $sGetSetCheck == 'get') {
 			if ($sGetSetCheck == 'set') {
-				$this->set($sFieldName, $aArgs[0]);
+				return $this->set($sFieldName, $aArgs[0]);
 			} else {
 				return $this->get($sFieldName);
 			}
@@ -193,6 +193,7 @@ abstract class Jaded_Model
 	{
 		$sInternalField = $this->getInternalField($sFieldName, 'set');
 		$this->aValues[$sInternalField] = $mValue;
+		return $this;
 	}
 
 	/**

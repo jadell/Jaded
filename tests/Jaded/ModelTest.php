@@ -52,6 +52,20 @@ class Jaded_ModelTest extends PHPUnit_Framework_TestCase
 		$this->assertEquals('mydefault', $oModel2->getDefaultField());
 	}
 
+	public function testSet_SetValues_ReturnsCorrectValues()
+	{
+		$oModel = new ModelTester();
+		$oModel->setIdField(123)
+			->setMultikey(456)
+			->setName('myname')
+			->setDefaultField('mydefault');
+
+		$this->assertEquals(123, $oModel->getIdField());
+		$this->assertEquals(456, $oModel->getMultiKey());
+		$this->assertEquals('myname', $oModel->getName());
+		$this->assertEquals('mydefault', $oModel->getDefaultField());
+	}
+
 	public function testIsIdentified_ModelNotFullyIdentified_ReturnsFalse()
 	{
 		$oModel = new ModelTester(array(
