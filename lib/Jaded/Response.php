@@ -6,6 +6,7 @@ class Jaded_Response
 {
 	protected $aAssigns = array();
 	protected $aHeaders = array();
+	protected $aTemplates = array();
 
 	////////////////////////////////////////////////////////////////////////////////
 	// PUBLIC /////////////////////////////////////////////////////////////////////
@@ -65,5 +66,25 @@ class Jaded_Response
 	public function isRedirected()
 	{
 		return !empty($this->aHeaders['Location']);
+	}
+
+	/**
+	 * Retrieve a named template
+	 * @param string $sName
+	 * @return string
+	 */
+	public function getTemplate($sName)
+	{
+		return isset($this->aTemplates[$sName]) ? $this->aTemplates[$sName] : null;
+	}
+
+	/**
+	 * Set a named template
+	 * @param string $sName
+	 * @param string $sTemplate
+	 */
+	public function setTemplate($sName, $sTemplate)
+	{
+		$this->aTemplates[$sName] = $sTemplate;
 	}
 }

@@ -48,4 +48,17 @@ class Jaded_ResponseTest extends PHPUnit_Framework_TestCase
 		$this->assertEquals($aExpected, $aResult);
 		$this->assertTrue($oResponse->isRedirected());
 	}
+
+	public function testTemplate_NamedTemplateSet_ReturnsNamedTemplate()
+	{
+		$oResponse = new Jaded_Response();
+		$oResponse->setTemplate('templatename', '/some/template');
+		$this->assertEquals('/some/template', $oResponse->getTemplate('templatename'));
+	}
+
+	public function testTemplate_NamedTemplateNotSet_ReturnsNull()
+	{
+		$oResponse = new Jaded_Response();
+		$this->assertNull($oResponse->getTemplate('templatename'));
+	}
 }
