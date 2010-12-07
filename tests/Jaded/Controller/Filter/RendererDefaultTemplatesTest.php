@@ -1,5 +1,5 @@
 <?php
-class Jaded_Controller_Filter_RendererChromeTest extends PHPUnit_Framework_TestCase
+class Jaded_Controller_Filter_RendererDefaultTemplatesTest extends PHPUnit_Framework_TestCase
 {
 	public function setUp()
 	{
@@ -13,17 +13,18 @@ class Jaded_Controller_Filter_RendererChromeTest extends PHPUnit_Framework_TestC
 		Jaded_Config::restore();
 	}
 
-	public function testFilter_HeaderAndFooterSet_ReturnsHeaderAndFooter()
+	public function testFilter_HeaderAndFooterSet_ReturnsHeaderAndFooterAndNullContent()
 	{
 		$oRequest = new Jaded_Request();
 		$oResponse = new Jaded_Response();
 		$oController = $this->getMock('Jaded_Controller', array('preProcess','process','postProcess'));
 
-		$oFilter = new Jaded_Controller_Filter_RendererChrome($oController);
+		$oFilter = new Jaded_Controller_Filter_RendererDefaultTemplates($oController);
 		$oFilter->dispatch($oRequest, $oResponse);
 
 		self::assertEquals('/some/chrome/header.php', $oResponse->getTemplate('header'));
 		self::assertEquals('/some/chrome/footer.php', $oResponse->getTemplate('footer'));
+		self::assertNull($oResponse->getTemplate('content'));
 	}
 
 	public function testFilter_HeaderOnlySet_ReturnsHeader()
@@ -34,7 +35,7 @@ class Jaded_Controller_Filter_RendererChromeTest extends PHPUnit_Framework_TestC
 		$oResponse = new Jaded_Response();
 		$oController = $this->getMock('Jaded_Controller', array('preProcess','process','postProcess'));
 
-		$oFilter = new Jaded_Controller_Filter_RendererChrome($oController);
+		$oFilter = new Jaded_Controller_Filter_RendererDefaultTemplates($oController);
 		$oFilter->dispatch($oRequest, $oResponse);
 
 		self::assertEquals('/some/chrome/header.php', $oResponse->getTemplate('header'));
@@ -49,10 +50,24 @@ class Jaded_Controller_Filter_RendererChromeTest extends PHPUnit_Framework_TestC
 		$oResponse = new Jaded_Response();
 		$oController = $this->getMock('Jaded_Controller', array('preProcess','process','postProcess'));
 
-		$oFilter = new Jaded_Controller_Filter_RendererChrome($oController);
+		$oFilter = new Jaded_Controller_Filter_RendererDefaultTemplates($oController);
 		$oFilter->dispatch($oRequest, $oResponse);
 
 		self::assertNull($oResponse->getTemplate('header'));
 		self::assertEquals('/some/chrome/footer.php', $oResponse->getTemplate('footer'));
+	}
+
+	public function testFilter_RequestUriSet_ReturnsContentTemplate()
+	{
+		$oRequest = new Jaded_Request();
+		$oRequest->setUri('/my/uri');
+
+		$oResponse = new Jaded_Response();
+		$oController = $this->getMock('Jaded_Controller', array('preProcess','process','postProcess'));
+
+		$oFilter = new Jaded_Controller_Filter_RendererDefaultTemplates($oController);
+		$oFilter->dispatch($oRequest, $oResponse);
+
+		self::assertEquals('/my/uri.php', $oResponse->getTemplate('content'));
 	}
 }

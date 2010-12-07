@@ -12,6 +12,7 @@ class Jaded_Request
 	protected $aParams = array();
 	protected $sControllerName = '';
 	protected $sMethod = self::MethodGet;
+	protected $sRequestUri = '';
 	protected $oSession = null;
 
 	////////////////////////////////////////////////////////////////////////////////
@@ -86,6 +87,24 @@ class Jaded_Request
 	public function setParam($sName, $mValue)
 	{
 		$this->aParams[$sName] = $mValue;
+	}
+
+	/**
+	 * Retrieve the request uri
+	 * @return string
+	 */
+	public function getUri()
+	{
+		return $this->sRequestUri;
+	}
+
+	/**
+	 * Set request uri
+	 * @param string $sUri
+	 */
+	public function setUri($sUri)
+	{
+		$this->sRequestUri = $sUri;
 	}
 
 	/**

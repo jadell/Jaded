@@ -2,11 +2,17 @@
 /**
  * Sets the configured header and footer
  */
-class Jaded_Controller_Filter_RendererChrome extends Jaded_Controller_Filter_PreProcessor
+class Jaded_Controller_Filter_RendererDefaultTemplates extends Jaded_Controller_Filter_PreProcessor
 {
 	protected function preProcess(Jaded_Request $oRequest, Jaded_Response $oResponse)
 	{
 		$oResponse->setTemplate('header', Jaded_Config::get('renderer.html.header'));
 		$oResponse->setTemplate('footer', Jaded_Config::get('renderer.html.footer'));
+
+		$sUri = $oRequest->getUri();
+		if ($sUri) {
+			$sContentTemplate = $sUri.'.php';
+			$oResponse->setTemplate('content', $sContentTemplate);
+		}
 	}
 }

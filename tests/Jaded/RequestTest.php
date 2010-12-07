@@ -66,6 +66,15 @@ class Jaded_RequestTest extends PHPUnit_Framework_TestCase
 		);
 	}
 
+	public function testRequestUri_SetUri_ReturnsUri()
+	{
+		$oRequest = new Jaded_Request();
+		$sUri = '/my/uri';
+		$oRequest->setUri($sUri);
+
+		$this->assertEquals($sUri, $oRequest->getUri());
+	}
+
 	public function testSession_NoSessionSet_ReturnsCorrectSessionObject()
 	{
 		$oRequest = new Jaded_Request();
