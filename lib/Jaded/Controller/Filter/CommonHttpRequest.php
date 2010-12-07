@@ -8,5 +8,6 @@ abstract class Jaded_Controller_Filter_CommonHttpRequest extends Jaded_Controlle
 		'Jaded_Controller_Filter_Session',
 		'Jaded_Controller_Filter_SetRequestMethod',
 		'Jaded_Controller_Filter_SetRequestParams',
+		'Jaded_Controller_Filter_RendererDefaultTemplates',
 	);
 }
