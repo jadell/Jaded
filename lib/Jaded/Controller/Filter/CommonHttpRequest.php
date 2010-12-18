@@ -2,7 +2,7 @@
 /**
  * Apply common filters needed for processing an HTTP request
  */
-abstract class Jaded_Controller_Filter_CommonHttpRequest extends Jaded_Controller_Filter
+class Jaded_Controller_Filter_CommonHttpRequest extends Jaded_Controller_Filter_Chain
 {
 	protected $aFilters = array(
 		'Jaded_Controller_Filter_Session',
