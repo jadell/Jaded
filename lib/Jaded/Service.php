@@ -37,7 +37,7 @@ abstract class Jaded_Service
 	 */
 	public static function set($sType, $oService)
 	{
-		if ($oService !== null && !($oService instanceof __CLASS__)) {
+		if ($oService !== null && !($oService instanceof self)) {
 			throw new Jaded_Service_Exception("Invalid Service type [{$sType}]", Jaded_Service_Exception::InvalidType);
 		}
 		self::$aInstances[$sType] = $oService;
