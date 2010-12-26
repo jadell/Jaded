@@ -25,8 +25,18 @@ abstract class Jaded_Service
 			if (!is_subclass_of($sType, __CLASS__)) {
 				throw new Jaded_Service_Exception("Invalid Service type [{$sType}]", Jaded_Service_Exception::InvalidType);
 			}
-			self::$aInstances[$sType] = new $sType();
+			self::set($sType, new $sType());
 		}
 		return self::$aInstances[$sType];
+	}
+
+	/**
+	 * Set a service instance
+	 * @param string $sType
+	 * @param Jaded_Service $oService
+	 */
+	public static function set($sType, Jaded_Service $oService)
+	{
+		self::$aInstances[$sType] = $oService;
 	}
 }
