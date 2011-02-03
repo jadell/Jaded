@@ -4,7 +4,7 @@ class Jaded_ServiceTest extends PHPUnit_Framework_TestCase
 	public function testSingleton_ReturnsRequestedService()
 	{
 		$oService = Jaded_Service::instance('ServiceTester');
-		$this->assertType('ServiceTester', $oService);
+		$this->assertInstanceOf('ServiceTester', $oService);
 	}
 
 	public function testSingleton_CalledMoreThanOnce_ReturnsSingleton()

@@ -4,7 +4,7 @@ class Jaded_RouterTest extends PHPUnit_Framework_TestCase
 	public function testSingleton_ReturnsRequestedService()
 	{
 		$oRouter = Jaded_Router::instance();
-		$this->assertType('Jaded_Router', $oRouter);
+		$this->assertInstanceOf('Jaded_Router', $oRouter);
 	}
 
 	public function testSingleton_CalledMoreThanOnce_ReturnsSingleton()

@@ -4,7 +4,7 @@ class Jaded_Model_DefinitionTest extends PHPUnit_Framework_TestCase
 	public function testSingleton_ReturnsRequestedModelDefinition()
 	{
 		$oDef = Jaded_Model_Definition::instance('ModelDefinitionTester');
-		$this->assertType('ModelDefinitionTester', $oDef);
+		$this->assertInstanceOf('ModelDefinitionTester', $oDef);
 	}
 
 	public function testSingleton_CalledMoreThanOnce_ReturnsSingleton()

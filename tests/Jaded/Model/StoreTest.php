@@ -4,7 +4,7 @@ class Jaded_Model_StoreTest extends PHPUnit_Framework_TestCase
 	public function testSingleton_ReturnsRequestedModelStore()
 	{
 		$oDef = Jaded_Model_Store::instance('ModelStoreTester');
-		$this->assertType('ModelStoreTester', $oDef);
+		$this->assertInstanceOf('ModelStoreTester', $oDef);
 	}
 
 	public function testSingleton_CalledMoreThanOnce_ReturnsSingleton()

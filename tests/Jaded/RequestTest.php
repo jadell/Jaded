@@ -78,7 +78,7 @@ class Jaded_RequestTest extends PHPUnit_Framework_TestCase
 	public function testSession_NoSessionSet_ReturnsCorrectSessionObject()
 	{
 		$oRequest = new Jaded_Request();
-		self::assertType('Jaded_Session_Php', $oRequest->getSession());
+		self::assertInstanceOf('Jaded_Session_Php', $oRequest->getSession());
 	}
 
 	public function testSession_SessionSet_ReturnsSetSessionObject()

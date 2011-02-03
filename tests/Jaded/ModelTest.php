@@ -4,8 +4,8 @@ class Jaded_ModelTest extends PHPUnit_Framework_TestCase
 	public function testConstruct_NoArgs_ConstructsModelWithDefaultDefAndStore()
 	{
 		$oModel = new ModelTester();
-		$this->assertType('ModelDefinitionTester', $oModel->getModelDefinition());
-		$this->assertType('ModelStoreTester', $oModel->getModelStore());
+		$this->assertInstanceOf('ModelDefinitionTester', $oModel->getModelDefinition());
+		$this->assertInstanceOf('ModelStoreTester', $oModel->getModelStore());
 
 		$this->assertEquals('some default', $oModel->getDefaultField());
 	}

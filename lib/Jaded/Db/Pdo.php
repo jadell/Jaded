@@ -95,7 +95,7 @@ class Jaded_Db_Pdo extends Jaded_Db
 			$sPort = isset($aDsn['port']) ? $aDsn['port'] : 3306;
 			$sDbName = trim($aDsn['path'], '/');
 			$sUser = $aDsn['user'] ? $aDsn['user'] : '';
-			$sPass = $aDsn['pass'] ? $aDsn['pass'] : '';
+			$sPass = isset($aDsn['pass']) ? $aDsn['pass'] : '';
 		
 			$sConnDsn = "{$sScheme}:host={$sHost};port={$sPort};dbname={$sDbName}";
 			$this->oDb = new PDO($sConnDsn, $sUser, $sPass);
