@@ -12,5 +12,3 @@ $oJadedAutoloader = new Jaded_Autoloader();
 $oJadedAutoloader->register(new Jaded_Autoloader_Finder_Pear($sJadedLibPath));
 $oJadedAutoloader->init();
 
-Jaded_Config::set('jaded.rootpath', $sJadedRootPath);
-Jaded_Config::set('jaded.libpath',  $sJadedLibPath);
